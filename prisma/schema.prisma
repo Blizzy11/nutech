@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Users {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  first_name    String
+  last_name     String
+  password      String
+  balance       Float     @default(0)
+  profile_image String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime? @updatedAt
+}
+
+model Banners {
+  id           String    @id @default(uuid())
+  banner_name  String
+  banner_image String
+  description  String
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime? @updatedAt
+}
+
+model Services {
+  id            String         @id @default(uuid())
+  service_code  String         @unique
+  service_name  String
+  service_icon  String
+  service_tarif Float
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime?      @updatedAt
+  Transactions  Transactions[]
+}
+
+model Transactions {
+  id             String @id @default(uuid())
+  invoice_number String
+
+  // foreign key with service code in table services
+  service          Services  @relation(fields: [service_code], references: [service_code])
+  service_code     String
+  service_name     String
+  transaction_type String
+  total_amount     Float
+  createdBy        String
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime? @updatedAt
+}
