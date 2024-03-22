@@ -1,17 +1,11 @@
 import express, { Request, Response } from "express";
 import routes from "./src/routes/routes";
+import dotenv from "dotenv";
+dotenv.config();
 const app = express();
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(routes);
+const port = process.env.PORT ? parseInt(process.env.PORT) : 3000;
 
-app.use("/uploads", express.static("uploads"));
-
-app.get("/", (req: Request, res: Response) => {
-  res.send("Hello World");
-});
-
-app.listen(5000, () => {
-  console.log("Server is running on port 5000");
+app.listen(port, "0.0.0.0", function () {
+  console.log(`Server is running on port ${port}`);
 });
