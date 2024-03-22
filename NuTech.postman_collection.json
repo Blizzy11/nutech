@@ -1,0 +1,911 @@
+{
+	"info": {
+		"_postman_id": "acb73a90-fb6c-41da-867c-5d4039cfa70a",
+		"name": "NuTech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29457620"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Registrasi",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"haris@gmail.com\",\r\n    \"first_name\" : \"Muhammad Haris\",\r\n    \"last_name\" : \"Kumala\",\r\n    \"password\" : \"haris123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/create",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\" : \"haris@gmail.com\",\r\n    \"first_name\" : \"Muhammad Haris\",\r\n    \"last_name\" : \"Kumala\",\r\n    \"password\" : \"haris123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/create",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "307"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"133-IgJB+VHmBOTO687g6UxUQhnGY+o\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 18 Mar 2024 14:03:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"e72e1fac-6eff-4836-a417-aa909f098e82\",\n    \"email\": \"haris@gmail.com\",\n    \"first_name\": \"Muhammad Haris\",\n    \"last_name\": \"Kumala\",\n    \"password\": \"$2b$10$wCkYH0nweCiqAzEgLgTw.e.VSKOtIB1fOJNQptW1Ii/gH/lnVrkXy\",\n    \"balance\": 0,\n    \"profile_image\": null,\n    \"createdAt\": \"2024-03-18T14:03:59.183Z\",\n    \"updatedAt\": \"2024-03-18T14:03:59.183Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxOGE4MTRmLTU5ZTEtNGRhNC1iMDg4LWIzYzM5MzkyNTdjNyIsImVtYWlsIjoiaGFyaXNAZ21haWwuY29tIiwiZmlyc3RfbmFtZSI6Ik11aGFtbWFkIEhhcmlzIiwibGFzdF9uYW1lIjoiS3VtYWxhIiwiaWF0IjoxNzEwOTQ2ODY3LCJleHAiOjE3MTA5NTA0Njd9.4R_ooPVnl3AUDAqPKkutAWDT-kGXT6mF2S5Dk2K-AFo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"user edited\",\r\n    \"last_name\": \"nutech\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/profile/update",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"profile",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"user edited\",\r\n    \"last_name\": \"nutech\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/profile/update",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"profile",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "153"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"99-UcqqIXxmJzLjYsRi9rvrlEAyM6A\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Mar 2024 15:02:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Update Pofile berhasil\",\n    \"data\": {\n        \"email\": \"haris@gmail.com\",\n        \"first_name\": \"user edited\",\n        \"last_name\": \"nutech\",\n        \"profile_image\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxOGE4MTRmLTU5ZTEtNGRhNC1iMDg4LWIzYzM5MzkyNTdjNyIsImVtYWlsIjoiaGFyaXNAZ21haWwuY29tIiwiZmlyc3RfbmFtZSI6Ik11aGFtbWFkIEhhcmlzIiwibGFzdF9uYW1lIjoiS3VtYWxhIiwiaWF0IjoxNzEwOTI1NDMzLCJleHAiOjE3MTA5MjkwMzN9.S4S_xXBuanumLsOfr5UDUEejGe2Yc3dnGb350zjFN1g",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/profile",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users/profile",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"profile"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "141"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8d-vl8RwUoFjKU2vzzlZc/zEFWrWeM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Mar 2024 09:17:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": {\n        \"email\": \"haris@gmail.com\",\n        \"first_name\": \"Muhammad Haris\",\n        \"last_name\": \"Kumala\",\n        \"profile_image\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Image Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxOGE4MTRmLTU5ZTEtNGRhNC1iMDg4LWIzYzM5MzkyNTdjNyIsImVtYWlsIjoiaGFyaXNAZ21haWwuY29tIiwiZmlyc3RfbmFtZSI6Ik11aGFtbWFkIEhhcmlzIiwibGFzdF9uYW1lIjoiS3VtYWxhIiwiaWF0IjoxNzEwOTQ2ODY3LCJleHAiOjE3MTA5NTA0Njd9.4R_ooPVnl3AUDAqPKkutAWDT-kGXT6mF2S5Dk2K-AFo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/haris/OneDrive/Pictures/Screenshot/Screenshot 2024-03-19 212711.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrl}}/users/profile/image",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"profile",
+								"image"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/haris/OneDrive/Pictures/Screenshot/Screenshot 2024-03-19 212711.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{baseUrl}}/users/profile/image",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"profile",
+										"image"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "245"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f5-ykCzrd+r693pU0fD7KVR+/HGI5I\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Mar 2024 15:57:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Update Profile Image berhasil\",\n    \"data\": {\n        \"email\": \"haris@gmail.com\",\n        \"first_name\": \"user edited\",\n        \"last_name\": \"nutech\",\n        \"profile_image\": \"http://localhost:5000/uploads/2024-03-20T15-57-53.370Z_Screenshot 2024-03-19 212711.png\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Balance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxOGE4MTRmLTU5ZTEtNGRhNC1iMDg4LWIzYzM5MzkyNTdjNyIsImVtYWlsIjoiaGFyaXNAZ21haWwuY29tIiwiZmlyc3RfbmFtZSI6InVzZXIgZWRpdGVkIiwibGFzdF9uYW1lIjoibnV0ZWNoIiwiaWF0IjoxNzEwOTkwMzI4LCJleHAiOjE3MTA5OTM5Mjh9.YoLPTEpBHK5OiOkgTudQJbO2c_rrq0qrK-LRlv4bxPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/users/balance",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"users",
+								"balance"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/users/balance",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"users",
+										"balance"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-OOsOhtrXRxodWpQFAC7ycYRofQU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 03:11:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Get Balance Berhasil\",\n    \"data\": {\n        \"balance\": 0\n    }\n}"
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"haris@gmail.com\",\r\n    \"password\" : \"haris123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Banners",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxOGE4MTRmLTU5ZTEtNGRhNC1iMDg4LWIzYzM5MzkyNTdjNyIsImVtYWlsIjoiaGFyaXNAZ21haWwuY29tIiwiZmlyc3RfbmFtZSI6InVzZXIgZWRpdGVkIiwibGFzdF9uYW1lIjoibnV0ZWNoIiwiaWF0IjoxNzEwOTUwODMwLCJleHAiOjE3MTA5NTQ0MzB9.SEhCn5p-5qwIgW3-Cx0-i03hBD93-DbJM1bJTSKtWQw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/banners",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"banners"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/banners",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"banners"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1531"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5fb-OBqDrWjxILqHC+lOvz5H1MJAol0\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 20 Mar 2024 16:20:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"id\": \"03ca514c-dcb6-4b47-be94-731c8325e8b7\",\n            \"banner_name\": \"Banner 1\",\n            \"banner_image\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"description\": \"Lerem Ipsum Dolor sit amet\",\n            \"createdAt\": \"2024-03-20T16:13:37.030Z\",\n            \"updatedAt\": \"2024-03-20T16:13:37.030Z\"\n        },\n        {\n            \"id\": \"50d93c0d-2178-481b-b2bb-76cfcd0bf459\",\n            \"banner_name\": \"Banner 3\",\n            \"banner_image\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"description\": \"Lerem Ipsum Dolor sit amet\",\n            \"createdAt\": \"2024-03-20T16:13:37.030Z\",\n            \"updatedAt\": \"2024-03-20T16:13:37.030Z\"\n        },\n        {\n            \"id\": \"5ebf658a-8d0a-4f10-bb4b-da7b18a9f926\",\n            \"banner_name\": \"Banner 6\",\n            \"banner_image\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"description\": \"Lerem Ipsum Dolor sit amet\",\n            \"createdAt\": \"2024-03-20T16:13:37.030Z\",\n            \"updatedAt\": \"2024-03-20T16:13:37.030Z\"\n        },\n        {\n            \"id\": \"72001382-5377-475e-b9d2-b3e0cc88f4fc\",\n            \"banner_name\": \"Banner 4\",\n            \"banner_image\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"description\": \"Lerem Ipsum Dolor sit amet\",\n            \"createdAt\": \"2024-03-20T16:13:37.030Z\",\n            \"updatedAt\": \"2024-03-20T16:13:37.030Z\"\n        },\n        {\n            \"id\": \"ab01de88-f03b-415c-96c4-5376f362d14c\",\n            \"banner_name\": \"Banner 5\",\n            \"banner_image\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"description\": \"Lerem Ipsum Dolor sit amet\",\n            \"createdAt\": \"2024-03-20T16:13:37.030Z\",\n            \"updatedAt\": \"2024-03-20T16:13:37.030Z\"\n        },\n        {\n            \"id\": \"d23b81eb-2cfa-4ec7-800c-4d1512995adc\",\n            \"banner_name\": \"Banner 2\",\n            \"banner_image\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"description\": \"Lerem Ipsum Dolor sit amet\",\n            \"createdAt\": \"2024-03-20T16:13:37.030Z\",\n            \"updatedAt\": \"2024-03-20T16:13:37.030Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Services",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxOGE4MTRmLTU5ZTEtNGRhNC1iMDg4LWIzYzM5MzkyNTdjNyIsImVtYWlsIjoiaGFyaXNAZ21haWwuY29tIiwiZmlyc3RfbmFtZSI6InVzZXIgZWRpdGVkIiwibGFzdF9uYW1lIjoibnV0ZWNoIiwiaWF0IjoxNzEwOTkwMzI4LCJleHAiOjE3MTA5OTM5Mjh9.YoLPTEpBHK5OiOkgTudQJbO2c_rrq0qrK-LRlv4bxPw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/services",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"services"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/services",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"services"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3113"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c29-Qgwt1mR/n8E6gxkoT4G8tUh/LR0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 03:05:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"id\": \"11680fa2-2929-4e44-9cfc-0ca788aa875a\",\n            \"service_code\": \"PDAM\",\n            \"service_name\": \"PDAM Berlangganan\",\n            \"service_icon\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"service_tarif\": 40000,\n            \"createdAt\": \"2024-03-20T16:26:17.440Z\",\n            \"updatedAt\": \"2024-03-20T16:26:17.440Z\"\n        },\n        {\n            \"id\": \"123def52-c574-43bb-972a-e356bc71e29d\",\n            \"service_code\": \"MUSIK\",\n            \"service_name\": \"Musik Berlangganan\",\n            \"service_icon\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"service_tarif\": 50000,\n            \"createdAt\": \"2024-03-20T16:26:17.440Z\",\n            \"updatedAt\": \"2024-03-20T16:26:17.440Z\"\n        },\n        {\n            \"id\": \"23f6cd7c-334c-409c-a8ac-f5d5b2a29138\",\n            \"service_code\": \"VOUCHER_MAKANAN\",\n            \"service_name\": \"Voucher Makanan\",\n            \"service_icon\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"service_tarif\": 100000,\n            \"createdAt\": \"2024-03-20T16:26:17.440Z\",\n            \"updatedAt\": \"2024-03-20T16:26:17.440Z\"\n        },\n        {\n            \"id\": \"4a0dfc93-d623-46f8-8aaf-b9cca22984f4\",\n            \"service_code\": \"ZAKAT\",\n            \"service_name\": \"Zakat\",\n            \"service_icon\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"service_tarif\": 300000,\n            \"createdAt\": \"2024-03-20T16:26:17.440Z\",\n            \"updatedAt\": \"2024-03-20T16:26:17.440Z\"\n        },\n        {\n            \"id\": \"4a9e01ee-f705-4813-9fbe-3cd4b21107ac\",\n            \"service_code\": \"QURBAN\",\n            \"service_name\": \"Qurban\",\n            \"service_icon\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"service_tarif\": 200000,\n            \"createdAt\": \"2024-03-20T16:26:17.440Z\",\n            \"updatedAt\": \"2024-03-20T16:26:17.440Z\"\n        },\n        {\n            \"id\": \"66cfb92f-d200-4ac6-83f9-ee2e988cd44f\",\n            \"service_code\": \"PAKET_DATA\",\n            \"service_name\": \"Paket data\",\n            \"service_icon\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"service_tarif\": 50000,\n            \"createdAt\": \"2024-03-20T16:26:17.440Z\",\n            \"updatedAt\": \"2024-03-20T16:26:17.440Z\"\n        },\n        {\n            \"id\": \"6dc6a9e5-fdf6-4152-81b2-0810df741974\",\n            \"service_code\": \"PAJAK\",\n            \"service_name\": \"Pajak PBB\",\n            \"service_icon\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"service_tarif\": 40000,\n            \"createdAt\": \"2024-03-20T16:26:17.440Z\",\n            \"updatedAt\": \"2024-03-20T16:26:17.440Z\"\n        },\n        {\n            \"id\": \"81997c57-044e-4e4b-adba-cf15d877b2f5\",\n            \"service_code\": \"TV\",\n            \"service_name\": \"TV Berlangganan\",\n            \"service_icon\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"service_tarif\": 50000,\n            \"createdAt\": \"2024-03-20T16:26:17.440Z\",\n            \"updatedAt\": \"2024-03-20T16:26:17.440Z\"\n        },\n        {\n            \"id\": \"8d98aef0-4da9-4ca4-99e5-7ed757f2bf5e\",\n            \"service_code\": \"PULSA\",\n            \"service_name\": \"Pulsa\",\n            \"service_icon\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"service_tarif\": 40000,\n            \"createdAt\": \"2024-03-20T16:26:17.440Z\",\n            \"updatedAt\": \"2024-03-20T16:26:17.440Z\"\n        },\n        {\n            \"id\": \"a034ff9c-cb8f-4649-bf2d-05592e6795cb\",\n            \"service_code\": \"PLN\",\n            \"service_name\": \"Listrik\",\n            \"service_icon\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"service_tarif\": 10000,\n            \"createdAt\": \"2024-03-20T16:26:17.440Z\",\n            \"updatedAt\": \"2024-03-20T16:26:17.440Z\"\n        },\n        {\n            \"id\": \"aff02c4d-cbe3-41a9-9e24-598779fea2e9\",\n            \"service_code\": \"PGN\",\n            \"service_name\": \"PGN Berlangganan\",\n            \"service_icon\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"service_tarif\": 50000,\n            \"createdAt\": \"2024-03-20T16:26:17.440Z\",\n            \"updatedAt\": \"2024-03-20T16:26:17.440Z\"\n        },\n        {\n            \"id\": \"ea419d9d-1878-4790-be3b-76ba9025cf4d\",\n            \"service_code\": \"VOUCHER_GAME\",\n            \"service_name\": \"Voucher Game\",\n            \"service_icon\": \"https://nutech-integrasi.app/dummy.jpg\",\n            \"service_tarif\": 100000,\n            \"createdAt\": \"2024-03-20T16:26:17.440Z\",\n            \"updatedAt\": \"2024-03-20T16:26:17.440Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Transactions",
+			"item": [
+				{
+					"name": "Topup",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"top_up_amount\": 40000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/topup",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"topup"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-6aGQ8nxUR2hkfScfBA8ZrRHqK9o\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 10:07:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 200,\n    \"message\": \"Top Up Balance berhasil\",\n    \"data\": {\n        \"balance\": 50000\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxOGE4MTRmLTU5ZTEtNGRhNC1iMDg4LWIzYzM5MzkyNTdjNyIsImVtYWlsIjoiaGFyaXNAZ21haWwuY29tIiwiZmlyc3RfbmFtZSI6InVzZXIgZWRpdGVkIiwibGFzdF9uYW1lIjoibnV0ZWNoIiwiaWF0IjoxNzExMDE1MzU1LCJleHAiOjE3MTEwMTg5NTV9.bHWNhsWa7J8vwjyGVHx54Vqx8qBAnKElYL25pORLdtI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"service_code\": \"PULSA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/transaction",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transaction"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"service_code\": \"PULSA\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/transaction",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transaction"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "304"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"130-VKU9jy2u3i78RziqbNNg53ScdXA\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 21 Mar 2024 10:02:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 0,\n    \"message\": \"Transaksi berhasil\",\n    \"data\": {\n        \"id\": \"983153bf-2469-4006-8404-80fcd4245e2b\",\n        \"invoice_number\": \"INV210324-0002\",\n        \"service_code\": \"PULSA\",\n        \"service_name\": \"Pulsa\",\n        \"transaction_type\": \"PAYMENT\",\n        \"total_amount\": 40000,\n        \"createdAt\": \"2024-03-21T10:02:52.340Z\",\n        \"updatedAt\": \"2024-03-21T10:02:52.344Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "History",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMxOGE4MTRmLTU5ZTEtNGRhNC1iMDg4LWIzYzM5MzkyNTdjNyIsImVtYWlsIjoiaGFyaXNAZ21haWwuY29tIiwiZmlyc3RfbmFtZSI6InVzZXIgZWRpdGVkIiwibGFzdF9uYW1lIjoibnV0ZWNoIiwiaWF0IjoxNzExMDI3NTg2LCJleHAiOjE3MTEwMzExODZ9.EPQbbb7Q1jBT1550VTXb5TBvl4Av5iT-z1Yn1_EOHtk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/transaction/history?page=1&limit=3",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"transaction",
+								"history"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
